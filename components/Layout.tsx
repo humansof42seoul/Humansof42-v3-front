@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
-import NavBar from "./NavBar";
+import { ReactNode } from 'react'
+import NavBar from './NavBar'
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export default function Layout({ children }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function Layout({ children }: Props) {
       <NavBar />
       <div>{children}</div>
     </>
-  );
+  )
 }

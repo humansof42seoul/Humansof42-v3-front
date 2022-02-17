@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 type Props = {
-  title: string;
-};
+  title: string
+}
 
 export default function Seo({ title }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function Seo({ title }: Props) {
         <title>{title} | Humans of 42</title>
       </Head>
     </>
-  );
+  )
 }

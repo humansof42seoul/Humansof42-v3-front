@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    dirs: ["pages", "components"],
+    dirs: ['pages', 'components'],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

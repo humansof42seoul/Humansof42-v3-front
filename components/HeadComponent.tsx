@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 export default function HeadComponent() {
   return (
@@ -21,5 +21,5 @@ export default function HeadComponent() {
         <title>Humans of 42</title>
       </Head>
     </>
-  );
+  )
 }

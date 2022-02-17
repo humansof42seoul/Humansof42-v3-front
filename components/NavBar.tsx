@@ -26,7 +26,8 @@ export default function NavBar() {
             <a
               className={[
                 router.pathname === '/' ? 'active' : '',
-                'nav-link', 'nav-item'
+                'nav-link',
+                'nav-item',
               ].join(' ')}
             >
               Home
