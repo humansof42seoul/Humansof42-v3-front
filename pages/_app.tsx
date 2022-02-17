@@ -1,3 +1,4 @@
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
