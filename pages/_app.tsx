@@ -9,11 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      <style jsx global>{`
-        a {
-          color: red;
-        }
-      `}</style>
     </div>
   )
 }
