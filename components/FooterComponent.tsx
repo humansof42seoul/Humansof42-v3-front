@@ -2,11 +2,19 @@ export default function FooterComponent() {
   return (
     <>
       <footer className="footer">
-        <a href="https://github.com/humansof42seoul" rel="noopener noreferrer" target="_blank">
-        <i className={["fab","fa-github", "fa-2x"].join(" ")}></i>
+        <a
+          href="https://github.com/humansof42seoul"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i className={['fab', 'fa-github', 'fa-2x'].join(' ')}></i>
         </a>
-        <a href="https://www.instagram.com/humans_of_42/" rel="noopener noreferrer" target="_blank">
-        <i className={["fab", "fa-instagram", "fa-2x"].join(" ")}></i>
+        <a
+          href="https://www.instagram.com/humans_of_42/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i className={['fab', 'fa-instagram', 'fa-2x'].join(' ')}></i>
         </a>
       </footer>
       <style jsx>{`
@@ -19,7 +27,7 @@ export default function FooterComponent() {
           align-items: center;
         }
         .footer a {
-            margin: 0.5rem;
+          margin: 0.5rem;
         }
       `}</style>
     </>

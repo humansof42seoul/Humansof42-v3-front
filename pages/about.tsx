@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import HeadComponent from '../components/HeadComponent'
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <HeadComponent title="About" />
@@ -13,4 +13,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About

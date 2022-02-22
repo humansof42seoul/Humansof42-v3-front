@@ -1,8 +1,15 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 export default function NavBar() {
   const router = useRouter()
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleIsCollapsed = () => {
+    setIsCollapsed(!isCollapsed);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
@@ -10,29 +17,32 @@ export default function NavBar() {
           Humans of 42
         </a>
         <button
-          className="navbar-toggler"
+          className={["navbar-toggler", isCollapsed ? "collapsed" : ""].join(' ')}
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded={isCollapsed ? "false": "true"}
           aria-label="Toggle navigation"
+          onClick={toggleIsCollapsed}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={['collapse', 'navbar-collapse'].join(' ')}>
-          {' '}
+        <div className={['collapse', 'navbar-collapse', isCollapsed ? "" : 'show'].join(' ')} id="navbar">
+          <ul className={["navbar-nav", "me-auto"].join(" ")}>
+          <li className="nav-item">
           <Link href="/">
             <a
               className={[
                 router.pathname === '/' ? 'active' : '',
                 'nav-link',
-                'nav-item',
               ].join(' ')}
             >
               Home
             </a>
           </Link>
+          </li>
+          <li className="nav-item">
           <Link href="/about">
             <a
               className={[
@@ -43,6 +53,8 @@ export default function NavBar() {
               About
             </a>
           </Link>
+          </li>
+          </ul>
         </div>
       </div>
     </nav>
