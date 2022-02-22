@@ -4,10 +4,10 @@ import { useState } from 'react'
 
 export default function NavBar() {
   const router = useRouter()
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   const toggleIsCollapsed = () => {
-    setIsCollapsed(!isCollapsed);
+    setIsCollapsed(!isCollapsed)
   }
 
   return (
@@ -17,43 +17,52 @@ export default function NavBar() {
           Humans of 42
         </a>
         <button
-          className={["navbar-toggler", isCollapsed ? "collapsed" : ""].join(' ')}
+          className={['navbar-toggler', isCollapsed ? 'collapsed' : ''].join(
+            ' '
+          )}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbar"
           aria-controls="navbar"
-          aria-expanded={isCollapsed ? "false": "true"}
+          aria-expanded={isCollapsed ? 'false' : 'true'}
           aria-label="Toggle navigation"
           onClick={toggleIsCollapsed}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={['collapse', 'navbar-collapse', isCollapsed ? "" : 'show'].join(' ')} id="navbar">
-          <ul className={["navbar-nav", "me-auto"].join(" ")}>
-          <li className="nav-item">
-          <Link href="/">
-            <a
-              className={[
-                router.pathname === '/' ? 'active' : '',
-                'nav-link',
-              ].join(' ')}
-            >
-              Home
-            </a>
-          </Link>
-          </li>
-          <li className="nav-item">
-          <Link href="/about">
-            <a
-              className={[
-                router.pathname === '/about' ? 'active' : '',
-                'nav-link',
-              ].join(' ')}
-            >
-              About
-            </a>
-          </Link>
-          </li>
+        <div
+          className={[
+            'collapse',
+            'navbar-collapse',
+            isCollapsed ? '' : 'show',
+          ].join(' ')}
+          id="navbar"
+        >
+          <ul className={['navbar-nav', 'me-auto'].join(' ')}>
+            <li className="nav-item">
+              <Link href="/">
+                <a
+                  className={[
+                    router.pathname === '/' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/about">
+                <a
+                  className={[
+                    router.pathname === '/about' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  About
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
