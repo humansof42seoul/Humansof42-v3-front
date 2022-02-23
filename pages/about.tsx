@@ -6,23 +6,28 @@ import HeadComponent from '../components/HeadComponent'
 const About: NextPage = () => {
   return (
     <>
-    <div className={styles.container}>
-      <HeadComponent title="About" />
-      <main className={styles.main}>
-        <h1 className={styles.title}>About</h1>
-      </main>
-      <div className="members-container">
-      <Member name="yeji" role="interviewer" gitId="yechoi42" imgLocation="/yechoi.jpeg" />
+      <div className={styles.container}>
+        <HeadComponent title="About" />
+        <main className={styles.main}>
+          <h1 className={styles.title}>About</h1>
+        </main>
+        <div className="members-container">
+          <Member
+            name="yeji"
+            role="interviewer"
+            gitId="yechoi42"
+            imgLocation="/yechoi.jpeg"
+          />
+        </div>
       </div>
-    </div>
-    <style jsx>{`
-      .members-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    `}</style>
+      <style jsx>{`
+        .members-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      `}</style>
     </>
   )
 }
