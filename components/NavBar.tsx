@@ -63,6 +63,18 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/login">
+                <a
+                  className={[
+                    router.pathname === '/Login' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  Login
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
