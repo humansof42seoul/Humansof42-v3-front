@@ -1,7 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import Interview from '../components/Interview'
+import Interview from '../../components/Interview'
 
 type Post = {
+  id: number
   title: string
   content: string
 }
@@ -9,12 +10,12 @@ type Post = {
 const InterviewList: NextPage = ({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(process.env.NEXT_PUBLIC_APP_BACKEND)
   return (
     <ul>
       {posts.map((post: Post) => (
         <Interview
-          key={post.title}
+          key={post.id}
+          id={post.id}
           title={post.title}
           content={post.content}
         ></Interview>
