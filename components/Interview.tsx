@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 type Interview = {
   id: number
@@ -10,11 +10,13 @@ export default function Interview({ id, title, content }: Interview) {
   return (
     <>
       <li key={id}>
-        <Link href={{
-          pathname: 'interviews/id',
-          query: {id: id}
-        }}>
-        {title}
+        <Link
+          href={{
+            pathname: 'interviews/id',
+            query: { id: id },
+          }}
+        >
+          {title}
         </Link>
         {content}
       </li>
