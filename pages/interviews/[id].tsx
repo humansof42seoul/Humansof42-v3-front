@@ -1,13 +1,11 @@
-import { NextPage } from "next";
+import { NextPage } from 'next'
 
-const InterviewEnd: NextPage = (
-    
-) => {
-    return (
-        <>
-        <p>hoho</p>
-        </>
-    )
+const InterviewEnd: NextPage = () => {
+  return (
+    <>
+      <p>hoho</p>
+    </>
+  )
 }
 
 // export const getStaticPaths = async () => {
@@ -30,7 +28,7 @@ const InterviewEnd: NextPage = (
 // export const getStaticProps: GetStaticProps = async ({params}) => {
 //     const res = await fetch(process.env.NEXT_PUBLIC_APP_BACKEND + '/api/post')
 //     const post = await res.json()
-  
+
 //     return {
 //       props: {
 //         post,
