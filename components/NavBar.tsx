@@ -52,6 +52,18 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link href="/interviews">
+                <a
+                  className={[
+                    router.pathname === '/interviews' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  interviews
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link href="/about">
                 <a
                   className={[
