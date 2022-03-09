@@ -12,8 +12,7 @@ export default function Interview({ id, title, content }: Interview) {
       <li key={id}>
         <Link
           href={{
-            pathname: 'interviews/id',
-            query: { id: id },
+            pathname: `interviews/${id}`,
           }}
         >
           {title}

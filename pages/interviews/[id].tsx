@@ -1,38 +1,43 @@
-import { NextPage } from 'next'
+import {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+  NextPage,
+} from 'next'
 
-const InterviewEnd: NextPage = () => {
-  return (
-    <>
-      <p>hoho</p>
-    </>
-  )
+type Post = {
+  id: number
+  title: string
+  content: string
 }
 
-// export const getStaticPaths = async () => {
-//     // Return a list of possible value for id
-//   }
+const InterviewEnd: NextPage = ({
+  post,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return <p>Post:{post.title}</p>
+}
 
-// export function getAllPostIds() {
-//     const fs = require('fs');
-//     const fileNames = fs.readdirSync(postsDirectory)
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch(process.env.NEXT_PUBLIC_APP_BACKEND + `/api/post/`)
+  const posts = await res.json()
+  const paths = posts.map((post: Post) => ({
+    params: { id: post.id.toString() },
+  }))
+  return { paths, fallback: false }
+}
 
-// return fileNames.map(fileName => {
-//     return {
-//     params: {
-//         id: fileName.replace(/\.md$/, '')
-//     }
-//     }
-// })
-// }
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id
+  const res = await fetch(
+    process.env.NEXT_PUBLIC_APP_BACKEND + `/api/post/${id}`
+  )
+  const post = await res.json()
 
-// export const getStaticProps: GetStaticProps = async ({params}) => {
-//     const res = await fetch(process.env.NEXT_PUBLIC_APP_BACKEND + '/api/post')
-//     const post = await res.json()
-
-//     return {
-//       props: {
-//         post,
-//       },
-//     }
+  return {
+    props: {
+      post,
+    },
+  }
+}
 
 export default InterviewEnd
