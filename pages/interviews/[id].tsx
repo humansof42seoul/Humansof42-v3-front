@@ -14,7 +14,14 @@ type Post = {
 const InterviewEnd: NextPage = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return <p>Post:{post.title}</p>
+  return (
+    <>
+      <div className="container">
+        <h1>{post.title}</h1>
+        <div>{post.content}</div>
+      </div>
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
