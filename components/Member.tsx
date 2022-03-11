@@ -11,13 +11,7 @@ export default function Member({ name, role, gitId, imgLocation }: Props) {
     <>
       <div className="member-container">
         <div className="member-img-wrapper">
-          <Image
-            src={imgLocation}
-            alt={gitId}
-            width="100%"
-            height="100%"
-            objectFit="cover"
-          />
+          <Image src={imgLocation} alt={gitId} width="100%" height="100%" />
         </div>
         <div className="name">{name}</div>
         <div className="role">{role}</div>
@@ -36,8 +30,10 @@ export default function Member({ name, role, gitId, imgLocation }: Props) {
         .member-img-wrapper {
           max-width: 9rem;
           border-radius: 50%;
-          overflow: hidden;
+          width: 100%;
+          position: relative;
         }
+
         .name {
           font-size: 1.5rem;
         }

@@ -18,6 +18,24 @@ const About: NextPage = () => {
             gitId="yechoi42"
             imgLocation="/yechoi.jpeg"
           />
+          <Member
+            name="dog"
+            role="interviewer"
+            gitId="yechoi42"
+            imgLocation="/dog.jpeg"
+          />
+          <Member
+            name="yeji"
+            role="interviewer"
+            gitId="yechoi42"
+            imgLocation="/yechoi.jpeg"
+          />
+          <Member
+            name="yeji"
+            role="interviewer"
+            gitId="yechoi42"
+            imgLocation="/yechoi.jpeg"
+          />
         </div>
       </div>
       <style jsx>{`
