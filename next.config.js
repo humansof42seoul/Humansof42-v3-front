@@ -4,6 +4,9 @@ const nextConfig = {
   eslint: {
     dirs: ['pages', 'components'],
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 }
 
 module.exports = nextConfig

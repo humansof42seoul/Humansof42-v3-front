@@ -52,6 +52,18 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link href="/interviews">
+                <a
+                  className={[
+                    router.pathname === '/interviews' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  interviews
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link href="/about">
                 <a
                   className={[
@@ -60,6 +72,18 @@ export default function NavBar() {
                   ].join(' ')}
                 >
                   About
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/login">
+                <a
+                  className={[
+                    router.pathname === '/Login' ? 'active' : '',
+                    'nav-link',
+                  ].join(' ')}
+                >
+                  Login
                 </a>
               </Link>
             </li>
