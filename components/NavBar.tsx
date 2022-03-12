@@ -59,7 +59,7 @@ export default function NavBar() {
                     'nav-link',
                   ].join(' ')}
                 >
-                  interviews
+                  Interviews
                 </a>
               </Link>
             </li>
