@@ -34,6 +34,8 @@ const Login: NextPage = () => {
           text-align: center;
           align-items: center;
           max-width: 800px;
+          padding-top: 3rem;
+          padding-bottom: 3rem;
         }
         .form-group {
           display: table;
